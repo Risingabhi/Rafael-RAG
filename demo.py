@@ -10,7 +10,7 @@ from PIL import Image
 #2 Student's Assistant
 
 
-image = Image.open('infolab.png')
+image = Image.open('infolab.PNG')
 
 st.image(image, caption='Introducing RAG powered by Ai')
 
