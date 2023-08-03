@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
+import PyPDF2
 
 
 
@@ -17,21 +18,21 @@ st.image(image, caption='Introducing RAG powered by Ai')
 st.checkbox("Professor's Assistant")
 st.checkbox("Student's Assistant")
 
-chart_data = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+# chart_data = pd.DataFrame(
+#      np.random.randn(20, 3),
+#      columns=['a', 'b', 'c'])
 
-st.line_chart(chart_data)
-st.button('Upload Doc')
+# st.line_chart(chart_data)
+# st.button('Upload Doc')
 title = st.text_input('Your Query Here', 'Write your query')
 st.write('You asked Ai', title)
 st.button('send')
 
-import streamlit as st
-import PyPDF2
+
+
 
 # Create a title for the app
-st.title("File Upload Example")
+st.title("Upload your doc")
 
 # Add a file uploader widget with a label
 uploaded_file = st.file_uploader("Choose a file", type=["pdf"])
